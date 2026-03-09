@@ -3,71 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小剛(謝育廷) 攝影專業名片 V1 </title>
+    <title>張宇溱(Phoebe) 專業名片 V1 </title>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
     <script>
-      const KANG_DATA = {
-            LIFF_ID: "2008883499-yLpNwcHe",
-            BASE_URL: "https://joannahsu0327-maker.github.io/mycard/",
-            IMG_MAIN: "KANG_IMAGE.jpg",
-            IMG_INTRO: "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80&w=1000",
-            name: "小剛 (謝育廷)",
-            title: "商業攝影 | 視覺美學",
-            intro: "捕捉妳最自然的瞬間，\n紀錄妳未曾察覺的光采。",
+      const PHOEBE_DATA = {
+            LIFF_ID: "2009380379-UaPGhiRb",
+            BASE_URL: "https://joannahsu0327-maker.github.io/phoebe-card/",
+            IMG_MAIN: "PHOEBE_IMAGE.jpg",
+            IMG_INTRO: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1000",
+            name: "張宇溱(Phoebe)",
+            title: "家庭保障 | 財富傳承",
+            intro: "用專業撐起保護傘\n讓愛與財富代代相傳。",
             
             // --- 這裡可以改標題與內容 ---
-            feature_Title: "攝影服務項目", 
-            item1: "📸 個人/品牌形象照",
-            item2: "🎬 活動/講座紀實",
-            item3: "👗 產品/型錄拍攝",
-            item4: "✨ 風格修圖服務",
+            feature_Title: "服務項目", 
+            item1: "💰 退休現金流規劃",
+            item2: "🛡️ 家庭責任保障",
+            item3: "🌳 富過三代傳承規劃",
+            
             // -----------------------
 
-            url_Booking: "https://line.me/ti/p/XpVy9pGNLk",
-            url_IG: "https://www.instagram.com/kang06231977",
-            url_Web: "https://v3shot.com",
-            phone: "0916270725"
+            url_Booking: "https://line.me/ti/p/UPg32zpKeY",
+            url_IG: "https://www.instagram.com/lillian83768",
+            url_FB: "https://www.facebook.com/share/1FFbmXgVrb/?mibextid=wwXIfr",
+            phone: "0933937434"
         };
 
         async function main() {
             try {
-                await liff.init({ liffId: KANG_DATA.LIFF_ID });
+                await liff.init({ liffId: PHOEBE_DATA.LIFF_ID });
                 if (!liff.isLoggedIn()) { liff.login(); return; }
                 
                 const ts = "?t=" + Date.now();
                 await liff.shareTargetPicker([{
                     "type": "flex", 
-                    "altText": "您好，這是 " + KANG_DATA.name + " 的攝影專業名片",
+                    "altText": "您好，這是 " + PHOEBE_DATA.name + " 的攝影專業名片",
                     "contents": {
                         "type": "carousel",
                         "contents": [
                             { 
                                 "type": "bubble", 
-                                "hero": { "type": "image", "url": KANG_DATA.BASE_URL + KANG_DATA.IMG_MAIN + ts, "size": "full", "aspectRatio": "3:4", "aspectMode": "cover" }, 
+                                "hero": { "type": "image", "url": PHOEBE_DATA.BASE_URL + PHOEBE_DATA.IMG_MAIN + ts, "size": "full", "aspectRatio": "3:4", "aspectMode": "cover" }, 
                                 "body": { "type": "box", "layout": "vertical", "contents": [ 
-                                    { "type": "text", "text": KANG_DATA.name, "weight": "bold", "size": "xl" }, 
-                                    { "type": "text", "text": KANG_DATA.title, "size": "sm", "color": "#fb966e", "weight": "bold" } 
+                                    { "type": "text", "text": PHOEBE_DATA.name, "weight": "bold", "size": "xl" }, 
+                                    { "type": "text", "text": PHOEBE_DATA.title, "size": "sm", "color": "#fb966e", "weight": "bold" } 
                                 ] } 
                             },
                             { 
                                 "type": "bubble", 
-                                "hero": { "type": "image", "url": KANG_DATA.IMG_INTRO, "size": "full", "aspectRatio": "20:13", "aspectMode": "cover" }, 
+                                "hero": { "type": "image", "url": PHOEBE_DATA.IMG_INTRO, "size": "full", "aspectRatio": "20:13", "aspectMode": "cover" }, 
                                 "body": { "type": "box", "layout": "vertical", "spacing": "lg", "contents": [
-                                    { "type": "text", "text": KANG_DATA.intro, "size": "xs", "color": "#888888", "wrap": true },
+                                    { "type": "text", "text": PHOEBE_DATA.intro, "size": "xs", "color": "#888888", "wrap": true },
                                     // 改成這一行：
-                                    { "type": "text", "text": KANG_DATA.feature_Title, "weight": "bold", "size": "lg", "color": "#fb966e" },
+                                    { "type": "text", "text": PHOEBE_DATA.feature_Title, "weight": "bold", "size": "lg", "color": "#fb966e" },
                                     // 在程式碼中間找到這一段，改成這樣：
                                     { "type": "box", "layout": "vertical", "spacing": "sm", "contents": [
-                                    { "type": "text", "text": KANG_DATA.item1, "size": "md", "weight": "bold" },
-                                    { "type": "text", "text": KANG_DATA.item2, "size": "md", "weight": "bold" },
-                                    { "type": "text", "text": KANG_DATA.item3, "size": "md", "weight": "bold" },
-                                    { "type": "text", "text": KANG_DATA.item4, "size": "md", "weight": "bold" }
+                                    { "type": "text", "text": PHOEBE_DATA.item1, "size": "md", "weight": "bold" },
+                                    { "type": "text", "text": PHOEBE_DATA.item2, "size": "md", "weight": "bold" },
+                                    { "type": "text", "text": PHOEBE_DATA.item3, "size": "md", "weight": "bold" }
+                                  
                                     ]}
                                 ]},
                                 "footer": { "type": "box", "layout": "vertical", "contents": [ 
-                                    { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "預約拍攝諮詢", "uri": KANG_DATA.url_Booking } } 
+                                    { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "預約諮詢", "uri": PHOEBE_DATA.url_Booking } } 
                                 ] }
                             },
                             { 
@@ -75,11 +75,11 @@
                                 "body": { "type": "box", "layout": "vertical", "spacing": "md", "contents": [
                                     { "type": "text", "text": "與我聯繫", "weight": "bold", "size": "lg" }, { "type": "separator" },
                                     { "type": "box", "layout": "vertical", "spacing": "sm", "contents": [
-                                        { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "撥打電話", "uri": "tel:" + KANG_DATA.phone } },
-                                        { "type": "button", "style": "secondary", "color": "#EEEEEE", "action": { "type": "uri", "label": "加 LINE 好友", "uri": KANG_DATA.url_Booking } },
-                                        { "type": "button", "style": "secondary", "color": "#FEE8F0", "action": { "type": "uri", "label": "追蹤 Instagram", "uri": KANG_DATA.url_IG } },
-                                        { "type": "button", "style": "secondary", "color": "#E8F0FE", "action": { "type": "uri", "label": "官方網站 V3shot", "uri": KANG_DATA.url_Web } },
-                                        { "type": "button", "style": "link", "height": "sm", "action": { "type": "uri", "label": "📤 分享攝影名片", "uri": "https://liff.line.me/" + KANG_DATA.LIFF_ID } }
+                                        { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "撥打電話", "uri": "tel:" + PHOEBE_DATA.phone } },
+                                        { "type": "button", "style": "secondary", "color": "#EEEEEE", "action": { "type": "uri", "label": "加 LINE 好友", "uri": PHOEBE_DATA.url_Booking } },
+                                        { "type": "button", "style": "secondary", "color": "#FEE8F0", "action": { "type": "uri", "label": "追蹤 Instagram", "uri": PHOEBE_DATA.url_IG } },
+                                        { "type": "button", "style": "secondary", "color": "#E8F0FE", "action": { "type": "uri", "label": "Facebook", "uri": PHOEBE_DATA.url_FB } },
+                                        { "type": "button", "style": "link", "height": "sm", "action": { "type": "uri", "label": "📤 分享財富傳承名片", "uri": "https://liff.line.me/" + PHOEBE_DATA.LIFF_ID } }
                                     ]}
                                 ]}
                             }
