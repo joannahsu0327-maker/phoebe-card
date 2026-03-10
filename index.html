@@ -19,9 +19,11 @@
             
             // --- 這裡可以改標題與內容 ---
             feature_Title: "服務項目", 
-            item1: "💰 退休現金流規劃",
-            item2: "🛡️ 家庭責任保障",
-            item3: "🌳 富過三代傳承規劃",
+            item1: "🛡️ 全方位保障缺口健檢",
+            item2: "💵 客製化退休生活設計",
+            item3: "🏠 家庭經濟支柱保障規劃",
+            item4: "💰 稅務預留與資產傳承諮詢", // 新增第 4 項
+            item5: "🏹 企業及個人財富風險規避", // 新增第 5 項
             
             // -----------------------
 
@@ -31,7 +33,7 @@
             phone: "0933937434"
         };
 
-        async function main() {
+async function main() {
             try {
                 await liff.init({ liffId: PHOEBE_DATA.LIFF_ID });
                 if (!liff.isLoggedIn()) { liff.login(); return; }
@@ -60,7 +62,9 @@
                                     { "type": "box", "layout": "vertical", "spacing": "sm", "contents": [
                                         { "type": "text", "text": PHOEBE_DATA.item1, "size": "md", "weight": "bold" },
                                         { "type": "text", "text": PHOEBE_DATA.item2, "size": "md", "weight": "bold" },
-                                        { "type": "text", "text": PHOEBE_DATA.item3, "size": "md", "weight": "bold" }
+                                        { "type": "text", "text": PHOEBE_DATA.item3, "size": "md", "weight": "bold" },
+                                        { "type": "text", "text": PHOEBE_DATA.item4, "size": "md", "weight": "bold" },
+                                        { "type": "text", "text": PHOEBE_DATA.item5, "size": "md", "weight": "bold" }
                                     ]}
                                 ]},
                                 "footer": { "type": "box", "layout": "vertical", "contents": [ 
