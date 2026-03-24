@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>張宇溱(Phoebe) 專業名片 V1 </title>
+    <title>張宇溱(Phoebe) 專業名片 V1.1 </title>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
     <script>
-      const PHOEBE_DATA = {
+        const PHOEBE_DATA = {
             LIFF_ID: "2009380379-UaPGhiRb",
             BASE_URL: "https://joannahsu0327-maker.github.io/phoebe-card/",
             IMG_MAIN: "PHOEBE_IMAGE.jpg",
@@ -17,23 +17,21 @@
             title: "家庭保障 | 財富傳承",
             intro: "用專業撐起保護傘\n讓愛與財富代代相傳。",
             
-            // --- 這裡可以改標題與內容 ---
             feature_Title: "服務項目", 
             item1: "🛡️ 全方位保障缺口健檢",
             item2: "💵 客製化退休生活設計",
             item3: "🏠 家庭經濟支柱保障規劃",
-            item4: "💰 稅務預留與資產傳承諮詢", // 新增第 4 項
-            item5: "🏹 企業及個人財富風險規避", // 新增第 5 項
+            item4: "💰 稅務預留與資產傳承諮詢",
+            item5: "🏹 企業及個人財富風險規避",
             
-            // -----------------------
-
             url_Booking: "https://line.me/ti/p/UPg32zpKeY",
+            url_LineOA: "https://line.me/R/ti/p/@566yyzjo", // 更新：官方 LINE
             url_IG: "https://www.instagram.com/lillian83768",
             url_FB: "https://www.facebook.com/share/1FFbmXgVrb/?mibextid=wwXIfr",
             phone: "0933937434"
         };
 
-async function main() {
+        async function main() {
             try {
                 await liff.init({ liffId: PHOEBE_DATA.LIFF_ID });
                 if (!liff.isLoggedIn()) { liff.login(); return; }
@@ -77,10 +75,10 @@ async function main() {
                                     { "type": "text", "text": "與我聯繫", "weight": "bold", "size": "lg" }, { "type": "separator" },
                                     { "type": "box", "layout": "vertical", "spacing": "sm", "contents": [
                                         { "type": "button", "style": "primary", "color": "#fb966e", "action": { "type": "uri", "label": "撥打電話", "uri": "tel:" + PHOEBE_DATA.phone } },
-                                        { "type": "button", "style": "secondary", "color": "#EEEEEE", "action": { "type": "uri", "label": "加 LINE 好友", "uri": PHOEBE_DATA.url_Booking } },
+                                        { "type": "button", "style": "secondary", "color": "#EEEEEE", "action": { "type": "uri", "label": "加 LINE 官方帳號", "uri": PHOEBE_DATA.url_LineOA } },
                                         { "type": "button", "style": "secondary", "color": "#FEE8F0", "action": { "type": "uri", "label": "追蹤 Instagram", "uri": PHOEBE_DATA.url_IG } },
                                         { "type": "button", "style": "secondary", "color": "#E8F0FE", "action": { "type": "uri", "label": "Facebook", "uri": PHOEBE_DATA.url_FB } },
-                                        { "type": "button", "style": "link", "height": "sm", "action": { "type": "uri", "label": "📤 分享財富傳承名片", "uri": "https://liff.line.me/" + PHOEBE_DATA.LIFF_ID } }
+                                        { "type": "button", "style": "link", "height": "sm", "action": { "type": "uri", "label": "📤 分享財富傳承名片", "uri": "https://liff.me/" + PHOEBE_DATA.LIFF_ID } }
                                     ]}
                                 ]}
                             }
